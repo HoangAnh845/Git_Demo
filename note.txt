@@ -1,0 +1,47 @@
+1. Github là gì ? 
+    - GitHub là một dịch vụ lưu trữ mã nguồn trực tuyến (online) cho các dự án phần mềm và các tài liệu kỹ thuật. 
+        Nó cho phép những người dùng tạo và quản lý các kho lưu trữ dự án, upload mã nguồn và các tài liệu, theo dõi lịch sử thay đổi của các mã nguồn và thực hiện việc hợp tác cùng nhau trong phát triển các dự án.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - GitHub cho phép các nhà phát triển truy cập và sử dụng mã nguồn của các dự án khác để phát triển tiếp các ứng dụng của mình, hoặc để chia sẻ mã nguồn và các tài liệu kỹ thuật của mình với cộng đồng lập trình toàn cầu. 
+        Nó còn cung cấp các tính năng quản lý lỗi (issue tracking) để giúp các nhà phát triển theo dõi các vấn đề và lỗi trong dự án của họ.
+
+2. Ba khái niệm quan trọng: repo, commit, branch
+    - Repo (short for Repository): là nơi lưu trữ tất cả các tài liệu, mã nguồn, dữ liệu và các tài liệu khác liên quan đến một dự án phần mềm. 
+        Mỗi dự án phần mềm sẽ có một repository tương ứng. Một repository có thể được chia sẻ với cộng đồng, hoặc chỉ được phép truy cập bởi một số người được chọn.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - Commit: là hành động lưu trữ các thay đổi được thực hiện trên mã nguồn vào repository. 
+        Khi một nhà phát triển thực hiện các thay đổi trên mã nguồn, họ phải tạo một commit để lưu trữ các thay đổi đó vào repository. 
+        Mỗi commit sẽ có một tin nhắn giải thích về các thay đổi được thực hiện.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - Branch: là một nhánh riêng biệt trong repository, cho phép các nhà phát triển làm việc trên một phiên bản mã nguồn riêng, độc lập với các nhánh khác. 
+        Các nhánh thường được tạo ra để thực hiện các tính năng mới, sửa lỗi hoặc phát triển các phiên bản mới của dự án. 
+        Khi các thay đổi được thực hiện trên một nhánh, các nhà phát triển có thể thực hiện merge (hợp nhất) các thay đổi đó vào nhánh chính của repository. 
+        Việc sử dụng các nhánh khác nhau giúp các nhà phát triển làm việc độc lập với nhau và giữ cho repository luôn ổn định và an toàn.
+
+3. Các câu lệnh git cơ bản
+    - echo "# ten_kho_luu_tru" >> README.md: 
+        Tạo một file README.md và ghi nội dung "# ten_kho_luu_tru" vào đó.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - git init: 
+        Khởi tạo một repository mới trong thư mục hiện tại.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - git add README.md: Thêm file README.md vào trạng thái chuẩn bị commit.
+        Giải thích: 
+            Để lưu trữ (commit) các thay đổi trong repository, trước tiên bạn cần phải đánh dấu (stage) các tệp tin hoặc thư mục đã thay đổi, để Git biết rằng những thay đổi này cần được lưu trữ
+
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - git commit -m "first commit": 
+        Lưu trữ các thay đổi vào repository với tin nhắn "first commit".
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - git branch -M main: Đổi tên nhánh hiện tại thành 'main'.
+        Giải thích: 
+            Đảm bảo rằng tên nhánh cục bộ của bạn phù hợp với tên nhánh trên GitHub
+            không thực hiện câu lệnh này và vẫn sử dụng nhánh master thay vì main, bạn có thể gặp phải một số vấn đề với GitHub hoặc các công cụ tích hợp khác.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - git remote add origin https://github.com/HoangAnh845/ten_kho_luu_tru.git: 
+        Thiết lập một remote repository, trong trường hợp này là GitHub repository của người dùng 'HoangAnh845' và tên repository là 'ten_kho_luu_tru'.
+        Giải thích: 
+            Được sử dụng để thiết lập (set up) một kết nối (connection) giữa repository cục bộ của bạn và remote repository trên GitHub.
+    ----------------------------------------------------------------------------------------------------------------------------------------
+    - git push : 
+        Đẩy các thay đổi từ repository cục bộ lên GitHub repository 'ten_kho_luu_tru' với tên nhánh là 'main'. -u được sử dụng để thiết lập upstream (điểm đến mặc định) cho nhánh 'main' của repository local. Khi đó, lần sau khi thực hiện git push thì Git sẽ tự động đẩy các thay đổi lên GitHub repository tương ứng.
